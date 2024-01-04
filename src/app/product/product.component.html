@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+       
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+
+.ppp{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.ppp{
+    font-family: 'Quicksand', sans-serif;
+    
+    
+}
+
+img{
+    width: 125%;
+    height:95%;
+    padding-right: 40px;
+    
+    
+}
+.container{
+    width: 94vw;
+    margin: 0 auto;
+}
+.lg-title
+{
+    
+    padding: 0.2rem 0;
+    
+}
+.lg-title{
+    font-size: 3.5rem;
+    font-weight:bold;
+    text-align: center;
+    padding: 1.3rem 0;
+    opacity: 0.9;
+    font-family: 'Cinzel', serif;
+    font-style:italic;
+    margin-top: 70px;
+    
+    
+}
+.sm-title{
+    font-weight: 900;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+
+    
+}
+.products{
+    background:#f8f9fa;
+    padding: 1rem 0;
+}
+.product{
+    margin: 0.3rem;
+    position: relative;
+}
+.product-content{
+    background: #ededed;
+    padding: 3.5rem 3.5rem 4rem 4rem;
+    cursor: pointer;
+}
+.product-img{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.5);
+    width: 200px;
+    height: 190px;
+    padding-right: 19px;
+    border-radius: 30%;
+    
+}
+
+
+.btn-cart, .btn-buy{
+    background: transparent;
+    border: 1px solid black;
+    padding: 0.5rem 0;
+    width: 105px;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+    font-size: 13px;
+    
+}
+.btn-cart{
+    background:lightseagreen;
+    color: white;
+}
+.btn-cart:hover{
+    background:lightseagreen
+}
+.btn-buy{
+    background: white;
+}
+.btn-buy:hover{
+    background: lightseagreen;
+    color: #fff;
+}
+.product-info{
+    background: white;
+    padding: 2rem;
+}
+.product-info-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating span{
+    color: #40c9a2;
+}
+.product-name{
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size:18px;
+    padding-bottom: 20px;
+    
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.product-price{
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+    display: inline-block;
+}
+
+.product-img img{
+    transition: transform 0.6s ease;
+}
+.product:hover .product-img img{
+    transform: scale(1.1);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    
+  }
+  a{
+    text-decoration: none;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 992px){
+    .product-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-col-r-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1200px){
+    .product-items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product{
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+}
+
+@media screen and (min-width: 1336px){
+    .product-items{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .product-collection-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex{
+        height: 60vh;
+    }
+    .product-col-left{
+        height: 121.5vh;
+    }
+}  
+
+   
+
+    </style>
+    
+    
+    <body>
+        <section class="ppp">
+
+        <div class = "products">
+            <div class = "container">
+                <h1 class = "lg-title">Saara Paints</h1>
+                <div class="product-container">
+                    <div *ngFor="let product of products" class="product-card">
+                         <a [routerLink]="['/products', product.id]">     
+                <div class = "product-items">
+                    
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img [src]="product.thumbnail" alt="{{ product.title }}" />
+                            </div>
+                            
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                              <h2 class = "sm-title">{{ product.title }}</h2>
+                                
+                            </div>
+                            <a href = "#" class = "product-name">{{ product.price }}</a>
+                            <div class = "rating">
+                                <span><i class = "fas fa-star"></i></span>
+                                <span><i class = "fas fa-star"></i></span>
+                                <span><i class = "fas fa-star"></i></span>
+                                <span><i class = "fas fa-star"></i></span>
+                                <span><i class = "far fa-star"></i></span>
+                            </div><br>
+                            <button type = "button" class = "btn-cart"  > View More
+                                <span><i class = "fas fa-plus"></i></span>
+                            </button>
+                            </div>
+                     
+                    
+                   
+                    <!-- <br>
+<br>
+<br><br>
+<br>
+<br>
+<div class = "product-items">
+  <div *ngFor="let product of products" class="product-card">
+    <a [routerLink]="['/products', product.id]">       
+  <div class = "product">
+      <div class = "product-content">
+          <div class = "product-img">
+            <img [src]="product.thumbnail" alt="{{ product.title }}" />
+          </div>
+          
+      </div>
+
+      <div class = "product-info">
+          <div class = "product-info-top">
+            <h3>{{ product.title }}</h3>
+              
+          </div>
+          <p>{{ product.description }}</p>
+          <p>Price: {{ product.price }}</p>
+          <div class = "rating">
+              <span><i class = "fas fa-star"></i></span>
+              <span><i class = "fas fa-star"></i></span>
+              <span><i class = "fas fa-star"></i></span>
+              <span><i class = "fas fa-star"></i></span>
+              <span><i class = "far fa-star"></i></span>
+          </div><br>
+</div> -->

@@ -1,0 +1,364 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #C1908B;
+}
+
+.container {
+  max-width: 75%;
+  margin: auto;
+  height: 80vh;
+  margin-top: 5%;
+  background: white;
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.left, .right {
+  width: 50%;
+  padding: 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex1 {
+  display: flex;
+}
+
+.main_image {
+  width: auto;
+  height: auto;
+}
+
+.option img {
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+}
+
+.right {
+  padding: 50px 100px 50px 50px;
+}
+
+h3 {
+  color: #af827d;
+  margin: 20px 0 20px 0;
+  font-size: 25px;
+}
+
+h5,
+p,
+small {
+  color: #837D7C;
+}
+
+h4 {
+  color: red;
+}
+
+p {
+  margin: 20px 0 50px 0;
+  line-height: 25px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+label,
+.add span,
+.color span {
+  width: 25px;
+  height: 25px;
+  background: #000;
+  border-radius: 50%;
+  margin: 20px 10px 20px 0;
+}
+
+.color span:nth-child(2) {
+  background: #EDEDED;
+}
+
+.color span:nth-child(3) {
+  background: #D5D6D8;
+}
+
+.color span:nth-child(4) {
+  background: #EFE0DE;
+}
+
+.color span:nth-child(5) {
+  background: #AB8ED1;
+}
+
+.color span:nth-child(6) {
+  background: #F04D44;
+}
+
+.add label,
+.add span {
+  background: none;
+  border: 1px solid #C1908B;
+  color: #C1908B;
+  text-align: center;
+  line-height: 25px;
+}
+
+.add label {
+  padding: 10px 30px 0 20px;
+  border-radius: 50px;
+  line-height: 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #C1908B;
+  color: white;
+  margin-top: 20%;
+  border-radius: 30px;
+}
+
+@media only screen and (max-width:768px) {
+  .container {
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:511px) {
+  .container {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .left, .right {
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .option {
+    display: flex;
+    flex-wrap: wrap;
+  }
+} */
+
+/* 
+ <div class="container">
+      <div class="left">
+        <div *ngIf="product">
+          <h2>Title: {{ product.title }}</h2>
+          <p>Description: {{ product.description }}</p>
+          <p>Price: {{ product.price }}</p>
+          <p>Rating: {{ product.rating }}</p>
+          <p>Stock: {{ product.stock }}</p>
+          <p>Brand: {{ product.brand }}</p>
+          <p>Category: {{ product.category }}</p>
+          <img [src]="product.thumbnail" alt="Product Thumbnail" />
+        </div>
+      </div>
+    
+      <div class="right">
+        <h2>Product Images:</h2>
+        <div *ngFor="let image of product.images">
+          <img [src]="image" alt="Product Image" />
+        </div>
+      </div>
+    </div>
+    <button>add to cart</button>  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from '../product/product.service';
+
+@Component({
+  selector: 'app-product-description',
+  templateUrl: './product-description.component.html',
+  styleUrls: ['./product-description.component.css']
+})
+export class ProductDescriptionComponent implements OnInit {
+  productId!: number;
+  product: any;
+  activeImageIndex: number = 0;
+
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService
+  ) {}
+
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.productId = +params['id'];
+      this.getProductDetails();
+    });
+  }
+
+  getProductDetails() {
+    this.productService.getProduct(this.productId).subscribe((data) => {
+      this.product = data;
+    });
+  }
+
+  setActiveImage(index: number) {
+    this.activeImageIndex = index;
+  }
+
+  addToCart() {
+    // Implement your logic to add the product to the cart
+    // You can use a cart service or store the cart items locally in this component
+    // Here's an example of storing the cart items in the component:
+    
+    // Check if the cart items already exist in the local storage
+    const cartItems = localStorage.getItem('cartItems');
+    if (cartItems) {
+      const existingCartItems = JSON.parse(cartItems);
+      existingCartItems.push(this.product);
+      localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+    } else {
+      // If no cart items exist, create a new array with the current product and store it in the local storage
+      const newCartItems = [this.product];
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+    }
+// You can also display a success message or navigate to the cart page after adding the item
+    // Example: show a success message
+    alert('Product added to cart!');
+}
+} */
+  
+/* import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from '../product/product.service';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-product-description',
+  templateUrl: './product-description.component.html',
+  styleUrls: ['./product-description.component.css']
+})
+export class ProductDescriptionComponent implements OnInit {
+  productId!: number;
+  product: any;
+  activeImageIndex: number = 0;
+  userEmail: string = "2k19cse0083@kiot.ac.in"; // Assuming you have the user's email stored
+
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService,
+    private http: HttpClient
+  ) {}
+
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.productId = +params['id'];
+      this.getProductDetails();
+    });
+  }
+
+  getProductDetails() {
+    this.productService.getProduct(this.productId).subscribe((data) => {
+      this.product = data;
+    });
+  }
+
+  setActiveImage(index: number) {
+    this.activeImageIndex = index;
+  }
+
+  addToCart() {
+    // Store the product in the cart locally
+    const cartItems = localStorage.getItem('cartItems');
+    const newCartItem = {
+      userEmail: this.userEmail,
+      productId: this.product.id,
+      title: this.product.title,
+      price: this.product.price,
+      quantity: 1
+    };
+    if (cartItems) {
+      const existingCartItems = JSON.parse(cartItems);
+      const productIndex = existingCartItems.findIndex((item: any) => item.productId === newCartItem.productId);
+      if (productIndex !== -1) {
+        existingCartItems[productIndex].quantity++;
+      } else {
+        existingCartItems.push(newCartItem);
+      }
+      localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+    } else {
+      const newCartItems = [newCartItem];
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+    }
+
+    console.log('Product added to cart:', newCartItem);
+
+    // Check if the product exists in db.json and update the quantity accordingly
+    this.http.get<any>('http://localhost:3000/cartItems?userEmail=' + this.userEmail + '&productId=' + newCartItem.productId)
+  .subscribe(
+    (response: any) => {
+      if (Array.isArray(response) && response.length > 0) {
+        const existingCartItem = response[0];
+        existingCartItem.quantity++;
+        this.http.put('http://localhost:3000/cartItems/' + existingCartItem.id, existingCartItem)
+          .subscribe(
+            () => {
+              console.log('Product quantity updated in db.json:', existingCartItem);
+            },
+            error => {
+              console.error('Failed to update product quantity in db.json:', error);
+            }
+          );
+      } else {
+        // Product does not exist in db.json, add it as a new entry
+        this.http.post('http://localhost:3000/cartItems', newCartItem)
+          .subscribe(
+            (response: any) => {
+              console.log('Product added to db.json:', response);
+            },
+            error => {
+              console.error('Failed to add product to db.json:', error);
+            }
+          );
+      }
+
+      // Show alert message
+      alert('Product added to cart!');
+    },
+    error => {
+      console.error('Failed to fetch product from db.json:', error);
+    }
+  );
+  }} */

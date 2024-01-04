@@ -1,0 +1,147 @@
+<style>
+  body {
+    overflow: hidden;
+    padding: 0%;
+    margin: 0%;
+  }
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    
+    position: relative;
+  }
+
+  .home-cards img {
+    width: 100%;
+    
+    height: 70%;
+    display: block;
+    position: relative;
+  }
+
+  .home-cards .hello:hover .overlay {
+    opacity: 1;
+  }
+
+  .hello {
+    display: block;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color:pink;
+  }
+
+  .home-cards .hello:hover a {
+    display: inline-block;
+  }
+ .home-cards a {
+    display: none;
+    padding-top: 70px;
+    padding-left: 60px;
+    color: #0067b8;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .home-cards a:hover i {
+    margin-left: 10px;
+  }
+
+  .contain {
+    width: 100%;
+    max-width: 1480px;
+    margin: auto;
+    padding-top: 85px;
+  }
+
+
+  .showcase {
+    width: 100%;
+    height: 430px;
+    background: url("/assets/image/home2.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }
+
+  .showcase h2 {
+    margin-bottom: 230px;
+    margin-right: 930px;
+    color: rgb(221, 82, 82);
+    font-weight: 400;
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .showcase .btn {
+    position: absolute;
+    top: 34%;
+    margin-right: 810px;
+    height: 35px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+</style>
+<body>
+
+<div class="contain">
+  <header class="showcase">
+    <h2 class="heading">Explore the colors</h2>
+    <p class="btn">Choose From Our Pre-selected Colors in Store or <br>Create a Brand New Color that's Unique to You >></p>
+  </header>
+
+
+  <section class="home-cards">
+    <div class="hello">
+      <img [src]="myimages17" alt="" class="image">
+      <div class="overlay">
+        <a routerLink="/product">Wall Combination</a>
+      </div>
+     
+      
+    </div>
+
+    <div class="hello">
+      <img [src]="myimages18" alt="" class="image">
+      <div class="overlay">
+        <a routerLink="/product">Emulsion Paint</a>
+      </div>
+      
+     
+    </div>
+    <div class="hello">
+      <img [src]="myimages19" alt="" class="image">
+      <div class="overlay">
+        <a routerLink="/product">Stylish Texture</a>
+      </div>
+      
+      
+    </div>
+    <div class="hello">
+      <img [src]="myimages20" alt="" class="image">
+      <div class="overlay">
+        <a routerLink="/product">Antibacterial</a>
+      </div>
+   
+      
+    </div>
+  </section>
+</div>
+</body>

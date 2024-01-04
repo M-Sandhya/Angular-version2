@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://fontawesome.com/icons/eye-slash?f=classic&s=solid">
+
+<style>
+  .card{
+    margin-top: 10px;
+    border: none;
+    width:500px;
+    
+    padding:40px;
+    top:30%;
+   
+    left:58%;
+}
+h1{
+    font-size: 30px;
+    font-weight:600;
+    font-family:'Times New Roman', Times, serif;
+}
+.hello{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg,#2980b9, #8e44ad);
+    height: 100vh;
+    overflow: hidden;
+  }
+  a{
+    font-size: 15px;
+    text-decoration: none;
+  }
+  a:hover{
+    color: black;
+  }
+  small{
+    font-size: 13px;
+    
+  }
+  .form-label{
+    font-size: 17px;
+  }
+
+</style>
+
+
+<section class="hello">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>Register</h1>
+          </div>
+          <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Full Name</label>
+              <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1">
+              <div *ngIf="signupForm.controls['fullname'].invalid && signupForm.controls['fullname'].touched">
+                <small *ngIf="signupForm.controls['fullname'].errors?.['required']" class="text-danger">*Please enter Fullname</small>
+                <small *ngIf="signupForm.controls['fullname'].errors?.['minlength']" class="text-danger">*Enter at least 3 characters</small>
+              </div>
+            </div><br>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+              <input formControlName="mobile" type="text" class="form-control" id="exampleInputPassword1">
+              <div *ngIf="signupForm.controls['mobile'].invalid && signupForm.controls['mobile'].touched">
+                <small *ngIf="signupForm.controls['mobile'].errors?.['required']" class="text-danger">*Please enter Mobile Number</small>
+                <small *ngIf="signupForm.controls['mobile'].errors?.['pattern']" class="text-danger">*Must be 10 numbers and start with 9, 8, 7, or 6</small>
+              </div>
+            </div><br>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div *ngIf="signupForm.controls['email'].invalid && signupForm.controls['email'].touched">
+                <small *ngIf="signupForm.controls['email'].errors?.['required']" class="text-danger">*Email is required</small>
+                <small *ngIf="signupForm.controls['email'].errors?.['pattern']" class="text-danger">*Enter a valid email</small>
+              </div>
+            </div><br>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <div class="input-group">
+                <input formControlName="password" [type]="showPassword ? 'text' : 'password'" class="form-control" id="exampleInputPassword1">
+                <button class="btn btn-outline-secondary" type="button" (click)="togglePassword()">
+                  <span *ngIf="showPassword"><i class="far fa-eye-slash"></i></span>
+                  <span *ngIf="!showPassword"><i class="fas fa-eye"></i></span>
+                </button>
+              </div>
+            
+            
+              <div *ngIf="signupForm.controls['password'].invalid && signupForm.controls['password'].touched">
+                <small *ngIf="signupForm.controls['password'].errors?.['required']" class="text-danger">*Please enter a password</small>
+                <small *ngIf="signupForm.controls['password'].errors?.['pattern']" class="text-danger">*Password must be at least 6 characters and include at least one letter, one number, and one special character</small>
+              </div>
+            </div><br>
+            <button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary">Register</button>
+            <br>
+            <a routerLink="/login">Already a user? Login</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

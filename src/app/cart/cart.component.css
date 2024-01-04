@@ -1,0 +1,167 @@
+/* import { Component, OnInit } from '@angular/core';
+ export interface CartItem {
+  title: string;
+   price: number;
+    quantity: number;
+  fullPrice: string;
+   thumbnail: string;
+   description: string;
+ }
+
+ @Component({
+   selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    styleUrls: ['./cart.component.css']
+  })
+ export class CartComponent implements OnInit {
+    cartItems: CartItem[] = [];
+  subtotal: number = 0;
+    tax: number = 0;
+   total: number = 0;
+
+   ngOnInit() {
+    this.retrieveCartItems();
+   }
+
+  retrieveCartItems() {
+    const cartItems = localStorage.getItem('cartItems');
+    if (cartItems) {
+        this.cartItems = JSON.parse(cartItems) as CartItem[];
+/      this.changeTotal();
+   }
+   }
+
+    changeVal(item: CartItem) {
+     const eq = Math.round(item.price * item.quantity * 100) / 100;
+  item.fullPrice = "Rs." + eq.toFixed(2);
+      this.changeTotal();
+    }
+
+    changeTotal() {
+    let price = 0;
+    this.cartItems.forEach(item => {
+    if (typeof item.price === 'number' && !isNaN(item.price)) {
+       price += parseFloat(item.price.toFixed(2)) * item.quantity;
+     }
+  });
+
+    price = Math.round(price * 100) / 100;
+    const tax = Math.round(price * 0.05 * 100) / 100;
+     const shipping = 0; // Set the shipping value
+  const fullPrice = Math.round((price + tax + shipping) * 100) / 100;
+
+   this.subtotal = price;
+      this.tax = tax;
+     this.total = fullPrice;
+    }
+
+   removeItem(index: number) {
+      this.cartItems.splice(index, 1);
+      this.changeTotal();
+      localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
+   }
+
+  increaseQuantity(item: CartItem) {
+      item.quantity++;
+      this.changeVal(item);
+     localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
+ }
+   decreaseQuantity(item: CartItem) {
+    if (item.quantity > 0) {
+      item.quantity--;
+        this.changeVal(item);
+            localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
+     }
+  }
+
+   checkout() {
+
+   }
+  } */
+
+  /* export interface CartItem {
+    /* productId: number; // Add the productId property */
+    /* title: string;
+    price: number;
+    quantity: number;
+    fullPrice: string;
+    thumbnail: string;
+    description: string;
+  } */
+  
+  /* checkout() {
+    // Retrieve the existing cart items from db.json
+    this.http.get<CartItem[]>('http://localhost:3000/cartItems')
+      .subscribe(
+        (existingCartItems: CartItem[]) => {
+          const updatedCartItems: CartItem[] = [...existingCartItems];
+  
+          // Update the quantity of existing products or add new products to the cart
+          this.cartItems.forEach(newItem => {
+            const existingItem = existingCartItems.find(item => item.productId === newItem.productId);
+            if (existingItem) {
+              // Product already exists in the cart, update its quantity
+              existingItem.quantity += newItem.quantity;
+            } else {
+              // Product doesn't exist in the cart, add it
+              updatedCartItems.push(newItem);
+            }
+          });
+  
+          // Send a POST request to add/update the cart items
+          this.http.post('http://localhost:3000/cartItems', updatedCartItems)
+            .subscribe(
+              response => {
+                // Handle successful post request
+                console.log('Cart items updated successfully:', response);
+              },
+              error => {
+                // Handle error
+                console.error('Failed to update cart items:', error);
+              }
+            );
+        },
+        error => {
+          // Handle error
+          console.error('Failed to retrieve existing cart items:', error);
+        }
+      );
+  */ 
+
+
+
+  /* checkout() {
+    // Retrieve the existing cart items from db.json
+    this.http.get<CartItem[]>('http://localhost:3000/cartItems').subscribe(
+      (existingCartItems: CartItem[]) => {
+        // Check if each new item already exists, if not, add it
+        const newItems: CartItem[] = this.cartItems.filter(newItem => {
+          return !existingCartItems.some(
+            existingItem => existingItem.productId === newItem.productId
+          );
+        });
+  
+        // Send a POST request for each new cart item
+        newItems.forEach(newItem => {
+          this.http
+            .post('http://localhost:3000/cartItems', newItem)
+            .subscribe(
+              response => {
+                // Handle successful post request
+                console.log('New cart item added successfully:', response);
+              },
+              error => {
+                // Handle error
+                console.error('Failed to add new cart item:', error);
+              }
+            );
+        });
+      },
+      error => {
+        // Handle error
+        console.error('Failed to retrieve existing cart items:', error);
+      }
+    );
+  }
+  
+   */

@@ -1,0 +1,365 @@
+{
+  "signup": [
+    {
+      "fullname": "pri",
+      "email": "2kpriyakiot@gmail.com",
+      "password": "123456789",
+      "mobile": 1234567898,
+      "id": 7,
+      "address": "Gugai,Salem",
+      "pincode": "636006",
+      "ordered": [
+        {
+          "title": "Gradient Blue",
+          "price": 3500,
+          "quantity": 1,
+          "fullPrice": 3500,
+          "userId": 7
+        }
+      ],
+      "totalAmount": 3500
+    },
+    {
+      "fullname": "geetha",
+      "email": "2kgeetha@gmail.com",
+      "password": "qwertyuiop",
+      "mobile": 9876543215,
+      "id": 8,
+      "ordered": [
+        {
+          "title": "Abstract Pink",
+          "price": 2500,
+          "quantity": 1,
+          "fullPrice": 2500,
+          "userId": 8
+        },
+        {
+          "title": "Plain Green",
+          "price": 2500,
+          "quantity": 2,
+          "fullPrice": 5000,
+          "userId": 8
+        }
+      ],
+      "totalAmount": 7500,
+      "address": "Gugai,Salem",
+      "pincode": "636006"
+    },
+    {
+      "fullname": "sandy",
+      "email": "2k19cse083@kiot.ac.in",
+      "password": "sandy@27",
+      "mobile": "6381782584",
+      "id": 9,
+      "ordered": [
+        {
+          "title": "Gradient Blue",
+          "price": 3500,
+          "quantity": 2,
+          "fullPrice": 7000,
+          "userId": 9
+        },
+        {
+          "title": "Violet",
+          "price": 3000,
+          "quantity": 3,
+          "fullPrice": 9000,
+          "userId": 9
+        }
+      ],
+      "totalAmount": 16000,
+      "address": "Gugai,Salem",
+      "pincode": "636006"
+    },
+    {
+      "fullname": "Sandhya M",
+      "email": "adminsandy@gmail.com",
+      "password": "admin@27",
+      "mobile": "7010687464",
+      "id": 10
+    }
+  ],
+  "cartItems": [
+    {
+      "userEmail": "2kgeetha@gmail.com",
+      "productId": 5,
+      "title": "Abstract Pink",
+      "price": 2500,
+      "quantity": 1,
+      "id": 7,
+      "description": "Pink is a delicate and charming color that exudes femininity and playfulness. It is often associated with sweetness, romance, and a sense of innocence. Pink is a lighter shade of red, combining the passionate energy of red with a soft and gentle touch.The pink represents love and affection, evoking feelings of warmth and compassion.  ",
+      "thumbnail": "/assets/image/pro2.jpeg",
+      "fullPrice": "Rs.2500.00"
+    },
+    {
+      "userEmail": "2kgeetha@gmail.com",
+      "productId": 4,
+      "title": "Plain Green",
+      "price": 2500,
+      "quantity": 2,
+      "id": 8,
+      "description": "Green is a refreshing and harmonious color that represents nature and vitality. It is the color associated with plants, trees, and the lush landscapes of the natural world. With its calming and balancing qualities, green is often associated with feelings of tranquility and rejuvenation.The color green symbolizes renewal and abundance. ",
+      "thumbnail": "/assets/image/pro4.webp",
+      "fullPrice": "Rs.5000.00"
+    },
+    {
+      "userEmail": "2kgeetha@gmail.com",
+      "productId": 7,
+      "title": "Soft Red",
+      "price": 4000,
+      "quantity": 1,
+      "id": 12
+    },
+    {
+      "userEmail": "2kpriya@gmail.com",
+      "productId": 9,
+      "title": "Light Blue",
+      "price": 4500,
+      "quantity": 1,
+      "id": 13
+    },
+    {
+      "userEmail": "2kpriya@gmail.com",
+      "productId": 10,
+      "title": "Yellow",
+      "price": 3600,
+      "quantity": 1,
+      "id": 14
+    },
+    {
+      "userEmail": "2k19cse083@kiot.ac.in",
+      "productId": 1,
+      "title": "Gradient Blue",
+      "price": 3500,
+      "quantity": 4,
+      "id": 15,
+      "description": "Gradient Blue is a visually captivating color scheme that combines various shades of blue in a gradient or ombre effect. It evokes a sense of tranquility, depth, and serenity, reminiscent of the ocean or a clear blue sky. The gradual transition from darker blues to lighter tones creates a dynamic and mesmerizing visual impact.",
+      "thumbnail": "/assets/image/pro1.jpeg",
+      "fullPrice": "Rs.14000.00"
+    },
+    {
+      "userEmail": "2k19cse083@kiot.ac.in",
+      "productId": 3,
+      "title": "Bright Orange",
+      "price": 3500,
+      "quantity": 1,
+      "id": 16
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Gradient Blue",
+      "description": "Gradient Blue is a visually captivating color scheme that combines various shades of blue in a gradient or ombre effect. It evokes a sense of tranquility, depth, and serenity, reminiscent of the ocean or a clear blue sky. The gradual transition from darker blues to lighter tones creates a dynamic and mesmerizing visual impact.",
+      "price": 3500,
+      "discountPercentage": "12.96%",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pro1.jpeg",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRJr3Q67PKmph23SX_4GlCGBOLLqpiZGwTyNAHwCIrYymvZdKlqZZmcSmFw-d1ZiUfJk&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSonK7CFj6f1jsWlDlAM9ooQiM0KbtysJbSkNlbkzylHPaIflMwH73XXgqID6yTYMBznnc&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc0o2ZK24BkCUXPzYp66TVnX287GVgRldLo7YpEMy-NyRwEN5ZQ6iIQc3yd6mB3YIdZ8Y&usqp=CAU",
+        "https://i.pinimg.com/originals/8a/2e/4f/8a2e4f85da1823b5bf5ca7072487dce1.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Violet",
+      "description": "The color violet possesses a unique allure, standing out with its deep and intense hue. It is associated with creativity and artistic expression, making it a popular choice in design, art, and fashion. Violet can ignite inspiration and encourage introspection, inviting individuals to delve into their inner thoughts and emotions. ",
+      "price": 3000,
+      "discountPercentage": "17.94%",
+      "rating": 4.44,
+      "stock": 34,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/violet.jpeg",
+      "images": [
+        "https://media.designcafe.com/wp-content/uploads/2020/04/16135336/Purple-wall-paint-colours-for-your-home.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLNVxj0ypldsVP9U0fMJPPcunAdOfZxJHdP2ISpnf8R-GbnNcm-kSyc1GEnGJHbt9mFL0&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSluPtoTcCCbuG5MWrXmVFoVZts-fEl9Hyb8n81DF9bbdRvgl-nTlgjvbbv1W8b7_mxyHc&usqp=CAU"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bright Orange",
+      "description": "Orange is a vibrant and energetic color that radiates warmth and positivity. It sits between the intense energy of red and the vibrant joy of yellow on the color spectrum. With its lively and uplifting nature, orange is often associated with feelings of happiness and adventure.The color orange evokes a sense of vitality and creativity.",
+      "price": 3500,
+      "discountPercentage": "15.46%",
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pro5.jpeg",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8PepQTovyxGPERW_8q6Xf5Df81iUY41m_qkQrE30gjOli58XXdeL0-vSEF8ge8rCHuRM&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMW_Lw0VexuKUDZ6lbYZmXSpwYi3UJFgVnKzRClHO8Wgcpi5V1-1SO8xidvtC2NKL09fU&usqp=CAU",
+        "https://www.nipponpaint.co.in/wp-content/uploads/2019/03/orange-paint-colour-1024x640.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbBL0QQ2QTeKFAuwWvVSosxqDhDO3Dtqa18uJL3JyOYns0T0rxDZnvK0u7O97LnHu-5EU&usqp=CAU"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Plain Green",
+      "description": "Green is a refreshing and harmonious color that represents nature and vitality. It is the color associated with plants, trees, and the lush landscapes of the natural world. With its calming and balancing qualities, green is often associated with feelings of tranquility and rejuvenation.The color green symbolizes renewal and abundance. ",
+      "price": 2500,
+      "discountPercentage": "17.91%",
+      "rating": 4.3,
+      "stock": 123,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pro4.webp",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltfF4JRPS7p2E2eiOhEoEFfpxxGjaLo5v7aitFW2XFTfw2WRkDUTCS-p_vZ5Okw_eNNg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxXNZPdof22vYiejZWp5VvrmAFSUTSKBpTowug6A9CV0KOF2fewJp20fTj8x4hBW8Paes&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd9LvcERX11Q1QPZ5vN52LmMGhqrRCCkltn3CgWbezuT_yVEv8qD5W4BcQRQ5xM2hd2SE&usqp=CAU",
+        "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,w_730/at%2Farchive%2F5ca808992fafba1e3f671b0a1284319db35b8317"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Abstract Pink",
+      "description": "Pink is a delicate and charming color that exudes femininity and playfulness. It is often associated with sweetness, romance, and a sense of innocence. Pink is a lighter shade of red, combining the passionate energy of red with a soft and gentle touch.The pink represents love and affection, evoking feelings of warmth and compassion.  ",
+      "price": 2500,
+      "discountPercentage": "10.58%",
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pro2.jpeg",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYQ9kV2f9mGkGCpVN4qVx5pW3w7aeRDB4YQPnc5ueIeoILQjPspQVsCG5vrPyr_1ZWqj8&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD-wk_a9tcLl2a4KxRJgBA-xO-a3oAslYBsuNtJhe0QuK26dPbq1GawXfhAhUY0vkP_sQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFBSG-6VdwBJb3YWx6WbiN4JQWQdjlN6XQeulWqtq_D3J4zHtPF9BDYiJvucpNqaF-7Y&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfOqOZxQVsatbMsHe_S_Dox7xmvfriuo1B6P9t3Zfe0edHwbbfqDi1Ju0cRYvq4naPHM&usqp=CAU"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Dark Blue",
+      "description": "Dark Blue is a captivating and sophisticated color that exudes a sense of depth and authority. It is a rich and intense shade of blue, reminiscent of the night sky or the vast ocean depths. Dark Blue carries a sense of mystery and tranquility, creating a feeling of calmness and introspection.",
+      "price": 4500,
+      "discountPercentage": "12.96%",
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUBImU80oQaAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=",
+      "images": [
+        "https://5.imimg.com/data5/SELLER/Default/2020/11/GB/XO/OC/2444062/wall-paints-5--500x500.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhvuhIrE5CZuU_QqOjZ2WlCBBdgR0CfVvQMch-LBJ_LPMEgKyZu0yKK2ixE2emFx-RaUo&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd9y4Cc35X3UAHKb0SBsNA1X5RBmfPG2oDxPMzZBrjC3LcJmL5ouffq_EuKc6FkG6loK0&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL6MLD1O8wHdeMcRlfxvT0gw8l3Krxb0i43A&usqp=CAU"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Soft Red",
+      "description": "Soft Red is a gentle and subtle variation of the vibrant and passionate color red. It combines the energy and warmth of red with a softer and more muted tone, creating a delicate and approachable hue. Soft Red evokes feelings of warmth, affection, and tenderness.With its calming and soothing nature.",
+      "price": 4000,
+      "discountPercentage": "17.94",
+      "rating": 4.44,
+      "stock": 34,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/ss4.png",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxTTV1nVDoPtfZKVYTwImDqyMdBQhM1kT9SMIb7hoLXl8oq5Foh9D6yKHRUcCTFWhjq9E&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRaSDuihVbiKkb_gQ7bF-5o8iNcXyl3RfHKBiXedAsp5PBIAuZ-iiD5RUfUTUKoAWBZ30&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKYGzWtcRFDw4d4zoZB2kzsFzXGA8k2-r_ildDlB-IkKagENkmAGJ99ddYgr6NwTJAFmw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2pmsFG4igBRESl1T7wFv1VxqEI7SfHF5zdTRXUXvmUC6DUMFlI0pL9zld5JXXSGM3rLY&usqp=CAU"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Paper White",
+      "description": "Paper White is a pure and pristine shade of white, resembling the color of a blank sheet of paper. It is a clean and neutral hue that symbolizes clarity, simplicity, and purity. Paper White is often associated with a sense of cleanliness, innocence, and openness.The color Paper White is frequently used as a backdrop. ",
+      "price": 2500,
+      "discountPercentage": "15.46%",
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pro9.jpeg",
+      "images": [
+        "https://i.pinimg.com/originals/71/10/96/7110963ee603b8565f9cefd78819c7cd.jpg",
+        "https://jennakateathome.com/wp-content/uploads/2018/01/white-roll-arm-sofas-gray-rug-antiqued-mirrored-top-coffee-table.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdMMnhI2-BY6mser8q3u3xk_HDPaCTcFxmNAQ_r-TjRiPeJ4clpMu4C2fhubgzXKC4GVw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFrXzrOnYM4RT8aiZ21svM8oak9GQhgVgR6ZIgbNPSdaZStMEvQXp1ocXLke8LbVqEkrs&usqp=CAU"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Light Blue",
+      "description": "Light Blue is a gentle and calming color that resembles the soft and serene hues of a clear sky or a tranquil body of water. It is a pale and delicate shade of blue that evokes a sense of tranquility, serenity, and freshness. Light Blue carries a soothing and peaceful energy, creating a feeling of calmness and relaxation.",
+      "price": 4500,
+      "discountPercentage": "17.91%",
+      "rating": 4.3,
+      "stock": 123,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pp10.png",
+      "images": [
+        "https://www.nipponpaint.co.in/wp-content/uploads/2019/03/10-Paint-Colours-that-goes-well-with-shades-of-blue-for-home-space-1024x640.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3XfRKjaNl_nZvg1J-6c-KABdPtUh-LoVgGudajFT1ixHiPSE1wvxDjMz6p_dVhh6-XhM&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxYUXrJ1CgXQM4Qib8kEg39CJJq9hIeabmE4ktSeddxFPFEriCtuIJqXiJXji1Bzz-ZV4&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfk8bvuaP2iGffdDy_MJjrgo0sNvV0GHzGpa9GHnOG6QIAHdRSsM3TrqPbqEowfQCk-Y&usqp=CAU"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Yellow",
+      "description": "Yellow is a vibrant and cheerful color that radiates warmth, energy, and optimism. It is often associated with sunshine, happiness, and joy. Yellow is a bright and attention-grabbing hue that can instantly uplift and invigorate a space or design.The color yellow is known to evoke feelings of positivity, optimism, and enthusiasm.  ",
+      "price": 3600,
+      "discountPercentage": "10.58%",
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pp14.png",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTylotojXXVYp7DoaE1pc54NTVB5Musjsco01qQpxxsY234RFz1HsMyllhnhD52LVNJGLk&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqwDVwxY1jFz5UNgQG1T1eaE54V806gpndF09BXJTgVATtybP4dV541OCAvdlC7D9kM3g&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQzw46PuFS-V7V-_idL6fByiruJgst7epc5uXcfYjKzbDHrYiTMqU2TiH0TnUcJIDQc2w&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSldA4HNnybpcQ3lU9SBWDh3fd2IZanU2RrkM87y82seEDaS8SsBR9EsOa7f8CbiePTSjI&usqp=CAU"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Nello Brown",
+      "description": "Brown is a warm and earthy color that is often associated with stability, reliability, and comfort. It is a natural and grounding hue that resembles the tones of soil, wood, and other elements found in nature. Brown carries a sense of warmth, security, and connection to the earth.The color brown is often used to create a sense of stability . ",
+      "price": 2300,
+      "discountPercentage": "17.91%",
+      "rating": 4.3,
+      "stock": 123,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pp17.png",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtH-6k_GBQgXliYvwQxBZsX7Vs4NcNKqeFsG1SVIT3WS7n7w6RpXGT0FFCIczlr5_3-jI&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqHb2egrtt2D5Aj7S1e5E0qbDIfRwb0J7Y4S63EUv3Ns60vZ0WIebdcEq27ZRMY8s57Ew&usqp=CAU",
+        "https://www.asianpaints.com/content/dam/asian_paints/colours/room-shots/reds-oranges-colour-shade-asian-paints-8005.jpg.transform/cc-width-720-height-540/image.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Dark Green",
+      "description": "Dark Green is a rich and deep shade of green that embodies the lushness and vitality of the natural world. It is a color that represents growth, harmony, and a strong connection to nature. Dark Green carries a sense of stability, balance, and rejuvenation.The color Dark Green is often associated with quality such as stability.",
+      "price": 2900,
+      "discountPercentage": "10.58%",
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Asian Paints",
+      "category": "Paints",
+      "thumbnail": "/assets/image/pp15.png",
+      "images": [
+        "https://media.designcafe.com/wp-content/uploads/2020/02/21010924/green-colour-room-768x512.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjtV042G-0NJg5VpjNfSkOFsccfu_X2peacfjkR00S_eY5TTsffjjtudVUID58EmhK5OQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyPhIKedOgQzhOjE5VTRQPxG2FGwysZPpQhHqCyKlbu4xmUHr6M2r1-oPQI2kNABAC5pk&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTacpqvL8e1kcBomsaZviotUEG4t1hJpa8QKMUrvaNNyWUvMFCD0xw3FY6F7MTL81h7IO0&usqp=CAU"
+      ]
+    }
+  ]
+}

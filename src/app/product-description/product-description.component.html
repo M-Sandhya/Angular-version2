@@ -1,0 +1,213 @@
+
+  <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  html, body{
+      font-family: 'Roboto', sans-serif;
+  }
+  
+  img{
+      width: 110%;
+      display: block;
+  }
+  .main-wrapper{
+      min-height: 100vh;
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .container{
+      max-width: 900px;
+      padding: 0 1rem;
+      margin: 0 auto;
+      height:30%;
+  }
+  .product-div {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap; 
+    background-color: #fff;
+    border-radius: 3px;
+    gap: 10px;
+  }
+
+  .product-div-left {
+    padding: 20px;
+    flex: 1; 
+  }
+
+  .img-container img {
+    width: 100%; 
+    max-width: 350px; 
+    margin: 0 auto;
+    display: block;
+  }
+  .hover-container {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap; /
+  }
+
+  .hover-container div {
+    
+    border-radius: 3px;
+    margin: 0 4px 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 8px); 
+  }
+
+  .hover-container img {
+  
+  border-radius: 3px;
+  margin: 0 4px 8px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 90px;
+  cursor: pointer;
+ 
+}
+
+
+ 
+  .product-name {
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+
+  .product-price{
+      font-weight: 700;
+      font-size: 24px;
+      opacity: 0.9;
+      font-weight: 500;
+  }
+  .product-rating{
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+  }
+  .product-rating span{
+      margin-right: 6px;
+  }
+  .product-description{
+      font-weight: 18px;
+      line-height: 1.6;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-top: 22px;
+  }
+  .btn-groups{
+      margin-top: 22px;
+  }
+  .btn-groups button{
+      display: inline-block;
+      font-size: 16px;
+      font-family: inherit;
+      text-transform: uppercase;
+      padding: 15px 16px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  .btn-groups button .fas{
+      margin-right: 8px;
+  }
+  
+  .add-cart-btn{
+      background-color: cadetblue;
+      border: 2px solid cadetblue;
+      margin-right: 8px;
+  }
+  .add-cart-btn:hover{
+      background-color: cadetblue;
+      color:  cadetblue;
+  }
+  .buy-now-btn{
+      background-color: #000;
+      border: 2px solid #000;
+  }
+  .buy-now-btn:hover{
+      background-color: cadetblue;
+      color: #000;
+  }
+  
+  @media screen and (max-width: 992px){
+      .product-div{
+          grid-template-columns: 100%;
+      }
+      .product-div-right{
+          text-align: center;
+      }
+      .product-rating{
+          justify-content: center;
+      }
+      .product-description{
+          max-width: 400px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+  }
+  
+  @media screen and (max-width: 400px){
+      .btn-groups button{
+          width: 100%;
+          margin-bottom: 10px;
+      }
+  }
+  </style>
+  
+  
+
+  <br><br>
+  <div *ngIf="product" class="main-wrapper">
+    <div class="container">
+      <div class="product-div">
+        <div class="product-div-left">
+          <div class="img-container" #imgContainer>
+            <img [src]="product.thumbnail" alt="Product Thumbnail" />
+          </div>
+        </div>
+          <div class="hover-container">
+           
+            <div *ngFor="let image of product.images; let i = index">
+              <img [src]="image" alt="Product Image" (mouseover)="setActiveImage(i)" [class.active]="activeImageIndex === i" />
+            </div>
+          </div>
+        </div>
+        <div class="product-div-right">
+
+          
+
+          <span class="product-name">{{ product.title }}</span><br><br>
+          <span class="product-price">Rs.{{ product.price }}</span>
+          <div class="product-rating">
+            <span>Rating:</span>
+            <span>{{ product.rating }}</span>
+          </div>
+          <p class="product-description">{{ product.description }}</p>
+          <div class="btn-groups">
+            <button class="add-cart-btn" (click)="addToCart()"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+            <button class="buy-now-btn" (click)="handleBuyNowClick()">
+              <i class="fas fa-shopping-bag"></i>Buy Now
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>

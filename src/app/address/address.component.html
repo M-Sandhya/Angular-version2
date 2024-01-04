@@ -1,0 +1,82 @@
+<style>
+    #address-tab {
+      padding: 20px;
+    }
+    
+    .col-md-6 {
+      max-width: 300px; 
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    input.form-control {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    button.btn-primary {
+      padding: 10px 20px;
+      background-color:cadetblue;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button.btn-primary:hover {
+      background-color: rgb(11, 56, 57);
+    }
+    </style>
+       
+  
+  <!-- <div class="tab-pane" id="address-tab" role="tabpanel" aria-labelledby="address-nav">
+      <h4>Address</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Payment Address</h5>
+          <p>{{ loggedInUser?.address }}</p>
+          <p>Mobile: {{ loggedInUser?.mobile }}</p>
+          <button class="btn" (click)="editPaymentAddress()">Edit Address</button>
+        </div>
+        <div class="col-md-6">
+          <h5>Shipping Address</h5>
+          <p>{{ loggedInUser?.shippingAddress }}</p>
+          <p>Mobile: {{ loggedInUser?.shippingMobile }}</p>
+          <button class="btn" (click)="editShippingAddress()">Edit Address</button>
+        </div>
+      </div>
+    </div> -->
+    
+    <div class="tab-pane" id="address-tab" role="tabpanel" aria-labelledby="address-nav">
+        
+          <div class="col-md-6">
+            <form [formGroup]="addressForm" (submit)="saveChanges()">
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" formControlName="address" required>
+              </div>
+              <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" class="form-control" id="pincode" formControlName="pincode" required>
+              </div>
+              <button class="btn btn-primary" type="submit">Save Changes</button>
+              
+            </form>
+          </div>
+        </div>
+     
+      

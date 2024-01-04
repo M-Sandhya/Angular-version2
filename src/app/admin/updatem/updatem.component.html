@@ -1,0 +1,185 @@
+<style>
+
+  h1{
+    font-size: 30px;
+    color: hsl(0, 0%, 4%);
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 50px;
+  }
+  table{
+    width:100%;
+    table-layout: fixed;
+    height: auto;
+  }
+  .tbl-header{
+    background-color: rgba(255,255,255,0.3);
+   }
+  .tbl-content{
+    height:300px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Add this line for box lines */
+  }
+  button {
+  background-color: cadetblue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+button:hover {
+  background-color:rgb(56, 68, 69);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 140px;
+    position: fixed;
+    top: 0;
+    right: 18%;
+    width: 35%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    background-color: #ffffff;
+border-radius: 30px;
+box-shadow: 3px 3px 10px rgb(188, 188, 188);
+padding: 0px 20px 20px 20px;
+    
+
+  }
+
+  form label {
+    font-weight: bold;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  form button[type="submit"],
+  form button[type="button"] {
+    background-color: cadetblue;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  form button[type="submit"]:hover,
+  form button[type="button"]:hover {
+    background-color: rgb(56, 68, 69);
+  }
+  
+  
+
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+  body{
+    
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+background-position: center;
+
+  }
+  section{
+    margin: 0px;
+  }
+  
+
+  
+  ::-webkit-scrollbar {
+      width: 6px;
+  } 
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  } 
+  ::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }</style><body>
+      <section>
+         
+          <h1>Update Here!.</h1>
+          <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Category</th>
+                  <th>Actions</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+                <tr>
+                  <tr *ngFor="let product of products">
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.title }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>
+                      <button (click)="editProduct(product)">Edit</button></td>
+                      <td><button (click)="deleteProduct(product.id)">Delete</button>
+                    </td>
+                   
+                  </tr>
+               
+                
+              </tbody></table>
+            
+           
+<div *ngIf="selectedProduct">
+  
+  <form (ngSubmit)="saveProduct()">
+   
+    <label for="id">Id</label>
+    <input type="number" id="id" name="id" [(ngModel)]="selectedProduct.id" required>
+    
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" [(ngModel)]="selectedProduct.title" required>
+
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price" [(ngModel)]="selectedProduct.price" required>
+
+    <label for="category">Category</label>
+    <input type="text" id="category" name="category" [(ngModel)]="selectedProduct.category" required>
+
+   
+
+    <button type="submit">Save Changes</button>
+    <button type="button" (click)="cancelEdit()">Cancel Changes</button>
+  </form>
+</div>
+            
+            
+            
+            </div>

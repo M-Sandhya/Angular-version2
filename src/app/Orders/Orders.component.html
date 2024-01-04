@@ -1,0 +1,85 @@
+<style>
+    
+    
+   
+    
+
+        
+.table-responsive {
+  margin-top: 50px;
+  margin-left: 120px;
+}
+
+.table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px; 
+}
+
+
+.btn {
+  padding: 8px 16px;
+  background-color: cadetblue;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color:rgb(6, 64, 66);
+}
+
+
+    </style>
+ 
+
+   
+       
+        
+     <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th>Total</th>
+              <th>Date</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{ order.title }}</td>
+                <td>{{ order.price }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.fullPrice | currency:'INR' }}</td>
+                <td>{{ totalAmount }}</td>
+                <td> {{ getCurrentDateTime() | date: 'dd/MM/yyyy'}}</td>
+               
+    
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      
+       
+    
+       <!-- <div *ngFor="let order of ordered; let i = index">
+        <p>{{ i + 1 }}</p>
+        <p>{{ order.title }}</p>
+        <p>{{ order.quantity }}</p>
+        <p>{{ order.price }}</p>
+        <p><button class="btn" (click)="cancelOrder(order)">Cancel</button></p>
+       </div> -->

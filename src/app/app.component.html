@@ -1,0 +1,8 @@
+<ng-container *ngIf="!authService.isUserAdmin()">
+    <app-header></app-header>
+  </ng-container>
+  
+
+  
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>

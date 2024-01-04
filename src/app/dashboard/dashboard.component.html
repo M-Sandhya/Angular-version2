@@ -1,0 +1,108 @@
+<style>
+  body {
+  
+  background-color: #f8f9fe;
+  padding: 1rem;
+  border-radius: 0.675rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  
+}
+.container{
+  background-color: #f8f9fe;
+  padding: 1rem;
+  border-radius: 0.875rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  
+  
+  width:70%;
+
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: cadetblue;
+}
+
+.profile-button {
+    background:  cadetblue;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background:  cadetblue;
+}
+
+.profile-button:focus {
+    background:  cadetblue;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background:  cadetblue;
+    box-shadow: none
+}
+
+.back:hover {
+    color:  cadetblue;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+.text-right{
+  font-size: 20px;
+}
+.font-weight-bold{
+  font-size: 16px;
+}
+.text-black-50{
+  font-size: 15px;
+}
+
+
+</style>
+
+<div class="container rounded bg-white mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-3 border-right">
+      <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+        <img class="rounded-circle mt-5" width="150px" src="https://thumbs.dreamstime.com/b/protected-profile-placeholder-d-icon-business-communication-headshot-profile-avatar-shield-neutral-gender-user-silhouette-272699585.jpg">
+        <span class="font-weight-bold">{{ loggedInUser?.fullname }}</span>
+        <span class="text-black-50">{{ loggedInUser?.email }}</span>
+      </div>
+    </div>
+    <div class="col-md-5 border-right">
+      <div class="p-3 py-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-right">Your Profile</h4>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <label class="labels">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="editedUser.fullname" [disabled]="!isEditMode">
+          </div>
+          
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <label class="labels">Mobile Number</label>
+            <input type="text" class="form-control" [(ngModel)]="editedUser.mobile" [disabled]="!isEditMode">
+          </div>
+          <div class="col-md-12">
+            <label class="labels">Email ID</label>
+            <input type="text" class="form-control" [(ngModel)]="editedUser.email" [disabled]="!isEditMode">
+          </div>
+          <div class="col-md-12">
+            <label class="labels">Password</label>
+            <input type="text" class="form-control" [(ngModel)]="editedUser.password" [disabled]="!isEditMode">
+          </div>
+        </div>
+        <div class="mt-5 text-center">
+          <button class="btn btn-primary profile-button" type="button" (click)="enableEditMode()" *ngIf="!isEditMode">Edit Profile</button>
+          <button class="btn btn-primary profile-button" type="button" (click)="saveChanges()" *ngIf="isEditMode">Save Changes</button>
+          <button class="btn btn-primary profile-button ms-2" type="button" (click)="cancelEdit()" *ngIf="isEditMode">Cancel</button>
+        </div>
+      </div>
+    </div>
+    

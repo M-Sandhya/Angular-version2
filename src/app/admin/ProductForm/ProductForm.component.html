@@ -1,0 +1,111 @@
+<style>
+  .card{
+    margin-top: 10px;
+    border: none;
+    width:500px;
+    height:500px;
+    padding:40px;
+    background-color: rgba(255,255,255,0.3);
+   
+    left:38%;
+}
+h1{
+    font-size: 30px;
+    font-weight:600;
+    font-family:'Times New Roman', Times, serif;
+}
+.hello{
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/image/adm1.jpg");
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: 40px;
+    height: 530px;
+    
+    
+
+
+     
+
+    
+  }
+  a{
+    font-size: 15px;
+    text-decoration: none;
+    
+  }
+  a:hover{
+    color: black;
+  }
+  
+  
+  small{
+    font-size: 13px;
+    
+  }
+  .form-label{
+    font-size: 17px;
+  }
+  .btn btn-primary{
+    font-size: 90px;
+  }
+  input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;}
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+  
+
+</style>
+
+<section class="hello">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          
+      </div>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="title" class="form-label">Id</label>
+    <input type="number" id="id" formControlName="title" required>
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" id="title" formControlName="title" required>
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input type="number" id="price" formControlName="price" required>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="imageInput" class="form-label">Image: </label>
+    <input type="file" id="imageInput" (change)="onImageSelected($event)" accept="image/*">
+  </div>
+  <div class="mb-3">
+    <label for="category" class="form-label">Category</label>
+    <input type="text" id="category" formControlName="category" required>
+  </div>
+  <button type="submit">Submit</button>
+</form>

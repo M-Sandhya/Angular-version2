@@ -1,0 +1,736 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #262626;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .contain {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    margin-top: 90px;
+  }
+  
+ 
+  .showcase {
+    width: 100%;
+    height: 510px;
+    background: url("/assets/image/11.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .showcase h2 {
+   
+   margin-bottom:330px ;
+   margin-right: 900px;
+   color:cadetblue;
+   font-weight: 800;
+    
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  .showcase .btn {
+      position: absolute;
+    top:32%;
+    margin-right: 1130px;
+    height:30px;
+    width:90px;
+    font-size: 15px;
+    
+    color: white;
+    background-color:lightseagreen;
+   
+    cursor: pointer;
+  }
+  
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .home-cards img {
+    width: 100%;
+    margin-bottom: 20px;
+    height:60%;
+    position: relative;
+  }
+  .home-cards h3 {
+  margin-bottom: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.home-cards a {
+  display: inline-block;
+  padding-top: 10px;
+  color: #0067b8;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.home-cards a:hover i {
+  margin-left: 10px;
+}
+
+
+.lastcards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .lastcards img {
+    width: 100%;
+    margin-bottom: 20px;
+    height:60%;
+    position: relative;
+  }
+  .lastcards h3 {
+  margin-bottom: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.lastcards a {
+  display: inline-block;
+  padding-top: 10px;
+  color: #0067b8;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.lastcards a:hover i {
+  margin-left: 10px;
+}
+.serv {
+  height: 100vh;
+  width: 95%;
+  display: grid;
+  place-items: center;
+  margin-left: 50px;
+}
+.section-heading,
+.lg-title{
+  font-size:45px;
+font-family:'Times New Roman', Times, serif;
+
+}
+.lg-title{
+    
+    text-align: center;
+    padding: 1.3rem 0;
+    opacity: 0.9;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, cadetblue 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: cadetblue;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #2c7bfe;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+.sectiontitle{
+  font-size:45px;
+font-family:'Times New Roman', Times, serif;
+margin-left: 600px;
+margin-top: 60px;
+
+}
+.product-image {
+  height:150px;
+}
+
+img{
+    width: 110%;
+    height: 99%;
+    display: block;
+}
+.container{
+    width: 88vw;
+    margin: 0 auto;
+}
+
+.text-light{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    opacity: 0.5;
+    margin: 0.4rem 0;
+}
+
+/* product section */
+.products{
+    background:  #f8f9fa;
+    padding: 3.2rem 0;
+}
+
+.product{
+    margin: 2rem;
+    position: relative;
+}
+.product-content{
+    background:  #ededed;
+
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    cursor: pointer;
+}
+.product-img{
+    background:  rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px 10px  rgba(255, 255, 255, 0.5);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: background 0.5s ease;
+}
+.product-btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.btn-cart, .btn-buy{
+    background: transparent;
+    border: 1px solid black;
+    padding: 0.8rem 0;
+    width: 125px;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+}
+.btn-cart{
+    background: black;
+    color: white;
+}
+.btn-cart:hover{
+    background:#40c9a2;
+}
+.btn-buy{
+    background: white;
+}
+.btn-buy:hover{
+    background: #40c9a2;
+    color: #fff;
+}
+.product-info{
+    background: white;
+    padding: 2rem;
+}
+.product-info-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-name{
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.product-price{
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+    display: inline-block;
+}
+
+.product-img img{
+    transition: transform 0.6s ease;
+}
+.product:hover .product-img img{
+    transform: scale(1.1);
+}
+.product:hover .product-img{
+    background: #40c9a2;
+}
+.product:hover .product-btns{
+    opacity: 1;
+}
+
+/* Media Queries */
+@media screen and (min-width: 992px){
+    .product-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-col-r-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1200px){
+    .product-items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product{
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .products .text-light{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1336px){
+    .product-items{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .product-collection-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex{
+        height: 60vh;
+    }
+    .product-col-left{
+        height: 121.5vh;
+    }}
+</style>
+<div class="contain">
+     
+      <header class="showcase">
+          <h2 class="heading"> paint your home!!</h2>
+          <a routerLink="/category"  class="btn">shop now</a>
+      </header>
+    <section class="home-cards">
+      <div>
+      <img [src]="myimages5" alt="">
+        <h3>Best Colors</h3>
+        <p>
+          Painting your home is exciting, but choosing the right colours  while ensuring your family's safety can be a huge task.
+        </p>
+        <a routerLink="/category">Shop Now <i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div>
+      <img [src]="myimages6" alt="">
+        <h3>Bright View</h3>
+        <p>
+          Designer wallpapers with attractive patterns which works wonders in elevating house walls.
+        </p>
+        <a routerLink="/category">Shop Now <i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div>
+      <img [src]="myimages7" alt="">
+        <h3>Eco-Friendly</h3>
+        <p>
+          Our aim is to make home painting a safe and great experience with end-to-end execution!
+        </p>
+        <a routerLink="/category">Shop Now<i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div>
+      <img [src]="myimages8" alt="">
+        <h3>Explore More</h3>
+        <p>
+          The service allows  to assist in the selection of paint products, shades, textures, etc.
+        </p>
+        <a routerLink="/category">Shop Now <i class="fas fa-chevron-right"></i></a>
+    </div>
+</section>
+  
+   <div class = "products">
+        <div class = "container">
+            <h1 class = "lg-title">Special Products</h1>
+            
+
+            <div class = "product-items">
+                
+                <div class = "product">
+                    <div class = "product-content">
+                        <div class = "product-img">
+                          <img [src]="myimages9" alt="">
+                        </div>
+                        <div class = "product-btns">
+                            <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                                <span><i class="fas fa-plus-circle">
+                                </i></span>
+                            </button>
+                            
+                        </div>
+                    </div>
+
+                    <div class = "product-info">
+                       
+                        <a href = "#" class = "product-name">Lavendor</a>
+                        <p class = "product-price">Rs.2500</p>
+                        
+                    </div>
+
+                    
+                </div>
+                
+                <div class = "product">
+                    <div class = "product-content">
+                        <div class = "product-img">
+                          <img [src]="myimages10" alt="">
+                        </div>
+                        <div class = "product-btns">
+                          <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                            <span><i class="fas fa-plus-circle">
+                            </i></span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <div class = "product-info">
+                        
+                        <a href = "#" class = "product-name">Green</a>
+                       
+                        <p class = "product-price">Rs.3000</p>
+                    </div>
+                </div>
+               
+                <div class = "product">
+                    <div class = "product-content">
+                        <div class = "product-img">
+                          <img [src]="myimages11" alt="">
+                        </div>
+                        <div class = "product-btns">
+                          <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                            <span><i class="fas fa-plus-circle">
+                            </i></span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <div class = "product-info">
+                        
+                        <a href = "#" class = "product-name">Bright Orange</a>
+                        
+                        <p class = "product-price">Rs.2500</p>
+                    </div>
+                </div>
+                
+                <div class = "product">
+                    <div class = "product-content">
+                        <div class = "product-img">
+                          <img [src]="myimages12" alt="">
+                        </div>
+                        <div class = "product-btns">
+                          <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                            <span><i class="fas fa-plus-circle">
+                            </i></span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <div class = "product-info">
+                        
+                           
+                        <a href = "#" class = "product-name">Light Pink</a>
+                        
+                        <p class = "product-price">Rs.3500</p>
+                    </div>
+
+                    
+                </div>
+               
+                <div class = "product">
+                    <div class = "product-content">
+                        <div class = "product-img">
+                          <img [src]="myimages13" alt="">
+                        </div>
+                        <div class = "product-btns">
+                          <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                            <span><i class="fas fa-plus-circle">
+                            </i></span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <div class = "product-info">
+                       
+                        <a href = "#" class = "product-name"> Cyan Green</a>
+                       
+                        <p class = "product-price">Rs.2500</p>
+                    </div>
+                </div>
+                
+                <div class = "product">
+                    <div class = "product-content">
+                        <div class = "product-img">
+                          <img [src]="myimages14" alt="">
+                        </div>
+                        <div class = "product-btns">
+                          <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                            <span><i class="fas fa-plus-circle">
+                            </i></span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <div class = "product-info">
+                        
+                        <a href = "#" class = "product-name">Paper White</a>
+                        
+                        <p class = "product-price">Rs.2000</p>
+                    </div>
+                </div>
+            
+                 <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                        <img [src]="myimages15" alt="">
+                      </div>
+                      <div class = "product-btns">
+                        <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                          <span><i class="fas fa-plus-circle">
+                          </i></span>
+                      </button>
+                      </div>
+                  </div>
+
+                  <div class = "product-info">
+                     
+                      <a href = "#" class = "product-name">Yellow</a>
+                     
+                      <p class = "product-price">Rs.3000</p>
+                  </div>
+              </div>
+          
+  
+               <div class = "product">
+                <div class = "product-content">
+                    <div class = "product-img">
+                      <img [src]="myimages16" alt="">
+                    </div>
+                    <div class = "product-btns">
+                      <button type = "button" class = "btn-cart" [routerLink]="['/product']"> View More
+                        <span><i class="fas fa-plus-circle">
+                        </i></span>
+                    </button>
+                    </div>
+                </div>
+
+                <div class = "product-info">
+                    <div class = "product-info-top">
+                       
+                    <a href = "#" class = "product-name">Light Brown</a></div>
+                    
+                    <p class = "product-price">Rs.3500</p>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+      </div>
+<section class="serv">
+  <div class="row">
+    <h2 class="section-heading">Our Services</h2>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fas fa-hammer"></i>
+        </div>
+        <h3>Complete Makeover</h3>
+        <p>
+          Refresh your walls with a pearly sheen matex ez wash paint is antifungal and highly durable. 
+          this paint makes washing your walls easier than ever.
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fas fa-brush"></i>
+        </div>
+        <h3>Brightness</h3>
+        <p>
+          With a pleasant fragrance and better light reflection,
+           you'll have a bright look and feel.
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fas fa-wrench"></i>
+        </div>
+        <h3>Ultimate Protection</h3>
+        <p>
+          This will boost the strength of your building and guarantee that 
+          your home's walls are safe and beautiful.
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fas fa-truck-pickup"></i>
+        </div>
+        <h3>Experts</h3>
+        <p>
+          A skilled team of experts with experience
+           and an eye for detail.
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fas fa-broom"></i>
+        </div>
+        <h3>Verified background</h3>
+        <p>
+          An extensive background check with 
+          high-quality compliance and decoration.
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="icon-wrapper">
+          <i class="fas fa-plug"></i>
+        </div>
+        <h3>On-Site Delivery</h3>
+        <p>
+          Get products delivered safely to your doorstep.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="sectiontitle">
+  Ideas For Home
+</h2>
+<section class="lastcards">
+             <div>
+                <img [src]="myimages17" alt="">
+                  <h3>Wall Combination</h3>
+                  <p>
+                      Tri Color Combination For Your Home
+                  </p>
+                 </div>
+              <div>
+                <img [src]="myimages18" alt="">
+                  <h3>Protect Walls</h3>
+                  <p>
+                      Protect Your walls From Dust
+                  </p>
+                  </div>
+              <div>
+                <img [src]="myimages19" alt="">
+                  <h3>Stylish Texure</h3>
+                  <p>
+                      Stylish Wall Texure Design For Place
+                  </p>
+                  </div>
+              <div>
+                <img [src]="myimages20" alt="">
+                  <h3>Antibacterial</h3>
+                  <p>
+                      Explore the Antibacterial Paints 
+                  </p>
+                  
+              </div>
+    </section>
+    
+  
+    

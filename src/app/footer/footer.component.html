@@ -1,0 +1,123 @@
+<style>
+  .footer {
+    background-color: #2d2d2d;
+    color: #ffffff;
+  padding-left: 10rem;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  color:white;
+  padding: 0.8rem 0;
+}
+
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  color: #666;
+  padding-bottom: .5rem;
+}
+
+.footer .box-container .box a {
+  font-size: 1.4rem;
+  color:whitesmoke;
+  padding: 1rem 0;
+  display: block;
+}
+
+.footer .box-container .box a:hover {
+  color:cadetblue;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box a i {
+  padding-right: .5rem;
+  color: cadetblue;
+}
+ .info_form form input {
+    outline: none;
+    width: 90%;
+    padding: 7px 10px;
+    
+    
+  }
+  
+  .info_form form button {
+    padding: 8px 35px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background: cadetblue;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  h5{
+    font-size: 2.2rem;
+  color:white;
+  padding: 1.5rem 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+
+</style>
+<section class="footer">
+
+  <div class="box-container">
+  
+      <div class="box">
+          <h3>Quick links</h3>
+          <a routerLink="home"> <i class="fas fa-arrow-right"></i> Home</a>
+          
+          <a routerLink="About"> <i class="fas fa-arrow-right"></i> About</a>
+          
+          <a routerLink="cart"> <i class="fas fa-arrow-right"></i> Cart</a>
+          <a routerLink="contact"> <i class="fas fa-arrow-right"></i> Contact</a>
+      </div>
+  
+     
+      <div class="box">
+        <h3>Services available</h3>
+        <a href="#"> <i class="fas fa-arrow-right"></i> Fast delivery</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> Happy customers</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> Easy payments</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> 24/7 Available</a>
+        
+    </div>
+  
+    <div class="box">
+      <h3>Follow us</h3>
+      <a href="#"> <i class="fas fa-envelope"></i> saaratemp@gmail.com</a>
+      <a href="#"> <i class="fas fa-phone"></i> 6748932541 </a>
+      <a href="#"> <i class="fab fa-instagram"></i> _saara_paints </a>
+      <a href="#"> <i class="fab fa-linkedin"></i> OrganizeSaara </a>
+      
+  </div>
+  <div class="box">
+    <div class="info_form ">
+      <h5>
+        Newsletter
+      </h5>
+      <form action="#">
+        <input type="email" placeholder="Enter your email">
+        <button>
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  
+</div>
+
+</section>

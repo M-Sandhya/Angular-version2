@@ -1,0 +1,45 @@
+ <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+   
+ </head>
+ <body>
+    <header class="header">
+
+    <div class="logo"> <i class="fas fa-brush"></i> SAARA </div>
+
+    <nav class="navbar">
+        <a routerLink="home" [class.active]="isActive('home')" >Home</a>
+        <a routerLink="category" [class.active]="isActive('category')" >Products</a>
+        <a routerLink="example" [class.active]="isActive('example')" >About</a>
+        <a routerLink="contact" [class.active]="isActive('contact')" >Contact us</a>
+    </nav>
+
+
+    <div class="icons">
+     
+      <a routerLink="cart" class="logo1" [class.active]="isActive('cart')" >
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+     
+      <a routerLink="login" class="logo1" [class.active]="isActive('login')" >
+        <i class="fas fa-user"></i>
+      </a>
+      <a routerLink="logout" class="logo1" [class.active]="isActive('logout')" >
+        <i class="fas fa-sign-out-alt"></i>
+      </a>
+      
+     
+
+      <a routerLink="account" class="profile" [class.active]="isActive('account')" >
+        My Profile
+      </a>
+    </div>
+    
+      
+</header> 
+
+
+
+    
+    
